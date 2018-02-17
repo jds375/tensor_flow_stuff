@@ -75,7 +75,7 @@ def main(argv):
         print(template.format(VARIETIES[class_id],
                               100 * probability, expec))
 
-def __load_data(y_name='Species'):
+def __load_data():
     """Returns the wine dataset as (train_features, train_labels), (test_features, test_labels)."""
     train = pd.read_csv(TRAIN_PATH, names=CSV_COLUMN_NAMES, header=0)
     train_features, train_labels = train, train.pop(LABEL_NAME)
